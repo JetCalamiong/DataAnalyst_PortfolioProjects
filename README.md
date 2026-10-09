@@ -1,4 +1,5 @@
-# DataAnalyst_PortfolioProjects
+# Data Analyst Portfolio Projects
 
-SQL
-Cafe Sales 
+- SQL
+  - Cafe Sales Dataset: Data Cleaning
+  - Review the Script: [SQL - Data Cleaning](
