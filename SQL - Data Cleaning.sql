@@ -61,7 +61,7 @@ UPDATE cafe_sales_1 t1
 SET item = t2.item
 FROM item_corresponding_with_ppu t2
 WHERE t1.price_per_unit = t2.price_per_unit
-  AND t1.item IS NULL;
+  AND t1.item IS NULL AND t1.price_per_unit <> 3.00;
 
 -- replacing the null values of the price_per_unit column using the item column
 UPDATE cafe_sales_1 t1
@@ -88,4 +88,4 @@ WHERE price_per_unit IS NULL AND total_spent IS NOT NULL AND quantity IS NOT NUL
 -- 4. Remove the rows that are not going to be useful in data analysis
 DELETE
 FROM cafe_sales_1
-WHERE quantity IS NULL OR price_per_unit IS NULL OR total_spent IS NULL
+WHERE total_spent IS NULL
